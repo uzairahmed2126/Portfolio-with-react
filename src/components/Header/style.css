@@ -1,0 +1,20 @@
+@import "tailwindcss";
+#links {
+  align-items: center;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+#links > header {
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  text-align: end;
+  justify-content: end;
+}
+#links > header > a,
+Link {
+  height: 0;
+  color: #222;
+  cursor: pointer;
+  font-weight: 500;
+}

@@ -1,9 +1,9 @@
 @import "tailwindcss";
-* {
+/* * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
-}
+} */
 #links {
   display: flex;
   position: sticky;
@@ -15,7 +15,7 @@
   justify-content: end;
   align-items: center;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent */
+  background-color: rgba(255, 255, 255, 0.1); /* semi-transparent */
   backdrop-filter: blur(8px); /* the magic */
   -webkit-backdrop-filter: blur(8px); /* Safari support */
 }

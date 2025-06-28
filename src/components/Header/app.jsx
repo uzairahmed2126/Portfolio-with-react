@@ -1,27 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./style.css";
 import { About, Section } from "../index.js";
-import { Link } from "react-router-dom";
 function Header() {
+  const aboutRef = useRef(null);
+  const homeRef = useRef(null);
+
+  const scrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <div id="links">
         <header>
-          <Link to={"/"}>Home</Link>
-          <Link to={"/about"}>About Me</Link>
-          <a
-            href="https://www.linkedin.com/in/uzair-ahmed-13230a250/"
-            target="_blank"
-          >
+          <button onClick={scrollToHome}>Home</button>
+          <button onClick={scrollToAbout}>About Me</button>
+          <a href="https://www.linkedin.com/in/uzair-ahmed-13230a250/">
             LinkedIn
           </a>
-          <a href="https://github.com/uzairahmed2126" target="_blank">
-            Github
-          </a>
+          <a href="https://github.com/uzairahmed2126">Github</a>
         </header>
       </div>
-      <Section />
-      <About />
+      <div ref={homeRef}>
+        <Section />
+      </div>
+      <div ref={aboutRef}>
+        <About />
+      </div>
     </>
   );
 }

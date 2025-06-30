@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import "./style.css";
-import { About, Section, Footer, Projects } from "../index.js";
+import { About, Section, Footer, Projects, Contact } from "../index.js";
 function Header() {
   const aboutRef = useRef(null);
   const homeRef = useRef(null);
   const topRef = useRef(null);
   const projectRef = useRef(null);
+  const contactRef = useRef(null);
   const scrollToAbout = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -19,7 +20,9 @@ function Header() {
   const scrollToProject = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   // window.addEventListener("scroll", (e) => {
   //   console.log(e.clientY);
   // });
@@ -30,6 +33,7 @@ function Header() {
           <button onClick={scrollToHome}>Home</button>
           <button onClick={scrollToAbout}>About Me</button>
           <button onClick={scrollToProject}>Projects</button>
+          <button onClick={scrollToContact}>Contact</button>
           <a href="https://www.linkedin.com/in/uzair-ahmed-13230a250/">
             LinkedIn
           </a>
@@ -44,6 +48,9 @@ function Header() {
       </div>
       <div ref={projectRef}>
         <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
       </div>
       <div ref={topRef}>
         <Footer handleClick={scrollToTop} />

@@ -1,9 +1,4 @@
 @import "tailwindcss";
-/* * {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-} */
 #links {
   display: flex;
   position: sticky;
@@ -29,13 +24,13 @@
 #links > header > a,
 button {
   padding: 10px;
-  background: gainsboro;
+  box-shadow: 1px 2px 2px;
   border-radius: 10px;
   color: #222;
   cursor: pointer;
   font-weight: 500;
   &:hover {
     background: #222;
-    color: aliceblue;
+    color: white;
   }
 }

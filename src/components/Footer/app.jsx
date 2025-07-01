@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = ({ handleClick }) => {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -31,10 +31,6 @@ const Footer = ({ handleClick }) => {
           &copy; {new Date().getFullYear()} Uzair Ahmed. All rights reserved.
         </p>
       </div>
-      <button className="footer scroll-to-top" onClick={handleClick}>
-        {" "}
-        ↑
-      </button>
     </footer>
   );
 };

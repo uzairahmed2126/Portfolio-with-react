@@ -1,35 +1,45 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./style.css";
 import { About, Section, Footer, Projects, Contact } from "../index.js";
+import { FaAlignJustify } from "react-icons/fa";
+
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const aboutRef = useRef(null);
   const homeRef = useRef(null);
-  const topRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
-  const scrollToAbout = () => {
-    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
+
   const scrollToHome = () => {
-    homeRef.current?.scrollIntoView({ behavior: "smooth" });
-    console.log(window.screenY);
+    if (!isOpen) homeRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-  const scrollToTop = () => {
+  const scrollToAbout = () =>
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToTop = () =>
     topRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToProject = () => {
+  const scrollToProject = () =>
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToContact = () => {
+  const scrollToContact = () =>
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  // window.addEventListener("scroll", (e) => {
-  //   console.log(e.clientY);
-  // });
+
+  function toggleMenu() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <>
-      <div id="links">
-        <header>
+      {/* Navbar (Logo + Menu Icon) */}
+      <div className="navbar">
+        <div className="logo">Uzair</div>
+        <button className="responsive-bar" onClick={toggleMenu}>
+          <FaAlignJustify className="FaAlignJustify" />
+        </button>
+        <div className="desktop-links">
           <button onClick={scrollToHome}>Home</button>
           <button onClick={scrollToAbout}>About Me</button>
           <button onClick={scrollToProject}>Projects</button>
@@ -38,8 +48,57 @@ function Header() {
             LinkedIn
           </a>
           <a href="https://github.com/uzairahmed2126">Github</a>
-        </header>
+        </div>
       </div>
+
+      {/* Responsive Dropdown Menu */}
+      {isOpen && (
+        <div className="mobile-menu">
+          <button
+            onClick={() => {
+              toggleMenu();
+              scrollToHome();
+            }}
+          >
+            Home
+          </button>
+          <button
+            onClick={() => {
+              toggleMenu();
+              scrollToAbout();
+            }}
+          >
+            About Me
+          </button>
+          <button
+            onClick={() => {
+              toggleMenu();
+              scrollToProject();
+            }}
+          >
+            Projects
+          </button>
+          <button
+            onClick={() => {
+              toggleMenu();
+              scrollToContact();
+            }}
+          >
+            Contact
+          </button>
+          <a
+            href="https://www.linkedin.com/in/uzair-ahmed-13230a250/"
+            onClick={toggleMenu}
+          >
+            LinkedIn
+          </a>
+          <a href="https://github.com/uzairahmed2126" onClick={toggleMenu}>
+            Github
+          </a>
+        </div>
+      )}
+
+      {/* Content Sections */}
       <div ref={homeRef}>
         <Section />
       </div>
@@ -52,10 +111,9 @@ function Header() {
       <div ref={contactRef}>
         <Contact />
       </div>
-      <div ref={topRef}>
-        <Footer handleClick={scrollToTop} />
-      </div>
+      <Footer />
     </>
   );
 }
+
 export default Header;

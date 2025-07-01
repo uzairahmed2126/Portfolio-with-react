@@ -1,36 +1,107 @@
 @import "tailwindcss";
-#links {
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
   position: sticky;
-  padding: 10px;
   top: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  height: 10vh;
-  text-align: center;
-  justify-content: end;
-  align-items: center;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.1); /* semi-transparent */
-  backdrop-filter: blur(8px); /* the magic */
-  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-#links > header {
-  align-items: center;
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* Desktop Nav Links */
+.desktop-links {
   display: flex;
-  gap: 50px;
-  text-align: end;
-  justify-content: end;
+  gap: 30px;
 }
-#links > header > a,
-button {
-  padding: 10px;
-  box-shadow: 1px 2px 2px;
-  border-radius: 10px;
+
+.desktop-links button,
+.desktop-links a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
   color: #222;
-  cursor: pointer;
   font-weight: 500;
-  &:hover {
-    background: #222;
-    color: white;
+  background: transparent;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.desktop-links button:hover,
+.desktop-links a:hover {
+  background: #222;
+  color: white;
+}
+
+/* Menu Icon */
+.responsive-bar {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.mobile-menu button,
+.mobile-menu a {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  background: #eee;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mobile-menu button:hover,
+.mobile-menu a:hover {
+  background: #222;
+  color: white;
+}
+
+/* Responsive Behavior */
+@media screen and (max-width: 1080px) {
+  .desktop-links {
+    display: none;
+  }
+
+  .responsive-bar {
+    display: block;
   }
 }

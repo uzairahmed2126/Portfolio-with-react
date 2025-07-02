@@ -4,7 +4,7 @@ function Section() {
   return (
     <div>
       <section id="section-id">
-        <h3 id="postion">
+        <h3 id="position">
           I'm
           <div id="full-name">
             <h1 id="first-name">Uzair</h1>

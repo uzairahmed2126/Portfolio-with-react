@@ -15,7 +15,7 @@ body {
   top: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -34,6 +34,7 @@ body {
 .desktop-links button,
 .desktop-links a {
   padding: 8px 12px;
+  box-shadow: 1px 2px 2px;
   border-radius: 8px;
   text-decoration: none;
   color: #222;
@@ -80,6 +81,8 @@ body {
 .mobile-menu a {
   font-size: 18px;
   padding: 10px 20px;
+  width: 30%;
+  text-align: center;
   border: none;
   background: #eee;
   border-radius: 10px;

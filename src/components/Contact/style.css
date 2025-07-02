@@ -39,6 +39,7 @@
   outline: none;
   transition: 0.3s;
   font-family: inherit;
+  resize: none;
 }
 
 .contact-form input:focus,

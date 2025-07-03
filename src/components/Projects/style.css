@@ -1,6 +1,5 @@
 .project-gallery {
   padding: 60px 20px;
-  background-color: #fdfdfd;
   text-align: center;
   text-transform: capitalize;
   word-spacing: 2px;
@@ -82,7 +81,6 @@
 .project h3 {
   padding: 8px 16px;
   margin: 0;
-  color: #333;
 }
 
 .project h4 {

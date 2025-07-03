@@ -14,8 +14,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(14px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -37,7 +36,6 @@ body {
   box-shadow: 1px 2px 2px;
   border-radius: 8px;
   text-decoration: none;
-  color: #222;
   font-weight: 500;
   background: transparent;
   transition: 0.3s;
@@ -45,12 +43,11 @@ body {
   cursor: pointer;
 }
 
-.desktop-links button:hover,
+/* .desktop-links button:hover,
 .desktop-links a:hover {
   background: #222;
   color: white;
-}
-
+} */
 /* Menu Icon */
 .responsive-bar {
   display: none;

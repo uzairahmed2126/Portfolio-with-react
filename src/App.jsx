@@ -1,7 +1,6 @@
 import React from "react";
-import { Header, Section, Footer, About } from "./components/index";
+import { Header, About } from "./components/index";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import { Routes, Route } from "react-router-dom";
 function App() {
   const router = createBrowserRouter([
     { path: "/", element: <Header /> },

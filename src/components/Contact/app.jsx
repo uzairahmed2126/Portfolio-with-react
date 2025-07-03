@@ -1,9 +1,9 @@
 import "./style.css";
-function Contact() {
+function Contact({ contactSection, contactSubText }) {
   return (
-    <section className="contact-section">
+    <section className={`contact-section ${contactSection}`}>
       <h2 className="contact-heading">Get In Touch</h2>
-      <p className="contact-subtext">
+      <p className={`contact-subtext ${contactSubText}`}>
         Have a question, project idea, or just want to say hello? Feel free to
         reach out!
       </p>

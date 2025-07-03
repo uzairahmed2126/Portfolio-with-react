@@ -1,0 +1,10 @@
+#color-changer-container {
+  position: fixed;
+  top: 90%;
+  left: 90%;
+}
+@media screen and (max-width: 480px) {
+  #color-changer-container {
+    left: 85%;
+  }
+}

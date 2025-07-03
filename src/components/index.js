@@ -4,11 +4,13 @@ import Section from "./Section/app";
 import About from "./About/app";
 import Projects from "./Projects/app";
 import Contact from "./Contact/app";
+import ColorChanger from "./ColorChanger/app";
 export {
     Header,
     Section,
     Footer,
     About,
     Projects,
-    Contact
+    Contact,
+    ColorChanger
 }

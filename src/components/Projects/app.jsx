@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-function Projects() {
+function Projects({ projectSection, projectDiv }) {
   const projectData = [
     {
       id: "project 1",
@@ -122,12 +122,12 @@ function Projects() {
     },
   ];
   return (
-    <section className="project-gallery">
+    <section className={`project-gallery ${projectSection}`}>
       <h2 className="gallery-heading">Projects Gallery</h2>
       <div className="gallery-grid">
         {projectData.map(
           ({ id, workType, languages, description, link, src, alt }) => (
-            <div className="project" key={id}>
+            <div className={`project ${projectDiv}`} key={id}>
               <a href={link} target="_blank">
                 <img src={src} alt={alt} />
               </a>

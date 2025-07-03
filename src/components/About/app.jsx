@@ -1,8 +1,8 @@
 import React from "react";
 import "./about.css";
-function About() {
+function About({ aboutSection }) {
   return (
-    <section className="about-section">
+    <section className={`about-section ${aboutSection}`}>
       <div className="about-container">
         <h2 className="about-heading">
           About <span>Me</span>

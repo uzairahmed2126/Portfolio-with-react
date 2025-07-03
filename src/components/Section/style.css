@@ -39,11 +39,37 @@
 
 @media screen and (max-width: 480px) {
   #section-id {
+    padding-top: 15%;
+    padding-left: 3%;
+  }
+  #position {
+    align-items: center;
+    font-size: 48px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  #experience {
+    font-size: 34px;
+    font-weight: 400;
+    color: #555;
+  }
+  #full-name {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 10%;
-    padding-left: 5%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    letter-spacing: 5px;
+  }
+  #first-name {
+    font-size: 54px;
+    font-weight: 700;
+    color: #222;
+  }
+
+  #last-name {
+    font-size: 48px;
+    font-weight: 600;
+    color: #444;
   }
 }

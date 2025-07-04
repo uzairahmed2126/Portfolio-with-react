@@ -9,7 +9,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "this porject is based on FrontEnd with Animations and the art gallery!",
       link: "https://decoresystem.netlify.app/",
-      src: "./src/assets/decor.png",
+      src: "@assets/decor.png",
       alt: "Decor System image",
     },
     {

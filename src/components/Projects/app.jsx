@@ -9,7 +9,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "this porject is based on FrontEnd with Animations and the art gallery!",
       link: "https://decoresystem.netlify.app/",
-      src: "../src/assets/decor.png",
+      src: "../public/decor.png",
       alt: "Decor System image",
     },
     {
@@ -19,7 +19,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "this porject is based on Fullstack Sanitary management system with Animations and the art gallery!",
       link: "https://github.com/Learners121/project--sanitary",
-      src: "../src/assets/sanitary.png",
+      src: "../public/sanitary.png",
       alt: "Sanitary Management System image",
     },
     {
@@ -28,7 +28,7 @@ function Projects({ projectSection, projectDiv }) {
       languages: "html,css,javascript.",
       description: "this porject is Purely based on Html css and js!",
       link: "https://github.com/uzairahmed2126/responsive-design",
-      src: "../src/assets/knaider.png",
+      src: "../public/knaider.png",
       alt: "Knaider image",
     },
     {
@@ -38,7 +38,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have a calculator that is calculate all the equations.",
       link: "https://github.com/uzairahmed2126/Dynamic-Survey-Builder",
-      src: "../src/assets/survey.png",
+      src: "../public/survey.png",
       alt: "calculator image",
     },
     {
@@ -47,7 +47,7 @@ function Projects({ projectSection, projectDiv }) {
       languages: "html,css,javascript,API.",
       description: "this porject is Purely based on Html css and js!",
       link: "https://github.com/uzairahmed2126/Project--Recipe--App",
-      src: "../src/assets/recipe.png",
+      src: "../public/recipe.png",
       alt: "Project-Recipe-App image",
     },
     {
@@ -57,7 +57,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "this porject is Purely based on Html css and js and operation with (DOM)!",
       link: "https://github.com/uzairahmed2126/Project--Recipe--App",
-      src: "../src/assets/crud.png",
+      src: "../public/crud.png",
       alt: "CRUD Project image",
     },
     {
@@ -67,7 +67,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have two buttons first one is for add question that user can easily add question with the answer and the question is comes to quiz dashboard after finishing the quiz user will get score.",
       link: "https://github.com/uzairahmed2126/react-Quiz-App",
-      src: "../src/assets/Quiz.png",
+      src: "../public/Quiz.png",
       alt: "Project-Quiz-App image",
     },
     {
@@ -77,7 +77,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have to enter any kind of to-do it will add them while click on add button and each to-do have complete and delete button also dropdown added for filter.",
       link: "https://github.com/uzairahmed2126/project--to-do-app",
-      src: "../src/assets/to-do.png",
+      src: "../public/to-do.png",
       alt: "To-Do-App image",
     },
     {
@@ -87,7 +87,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have to click on button then the random joke is generate.",
       link: "https://github.com/uzairahmed2126/project--to-do-app",
-      src: "../src/assets/joke.png",
+      src: "../public/joke.png",
       alt: "joke-generator image",
     },
     {
@@ -97,7 +97,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have to click on number who's showing  in Hit box,After time completion the score will show.",
       link: "https://github.com/uzairahmed2126/project--to-do-app",
-      src: "../src/assets/bubble.png",
+      src: "../public/bubble.png",
       alt: "bubble image",
     },
     {
@@ -107,7 +107,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have to scroll to X-axis then the image will auto generate.",
       link: "https://github.com/uzairahmed2126/project--infinite-scroll",
-      src: "../src/assets/scroll.png",
+      src: "../public/scroll.png",
       alt: "scroll image",
     },
     {
@@ -117,7 +117,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have a calculator that is calculate all the equations.",
       link: "https://github.com/uzairahmed2126/project--calculator",
-      src: "../src/assets/calculator.png",
+      src: "../public/calculator.png",
       alt: "calculator image",
     },
   ];

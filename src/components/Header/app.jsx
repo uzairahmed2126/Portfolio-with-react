@@ -41,7 +41,7 @@ function Header() {
     { text: "Projects", event: scrollToProject },
     { text: "Contact", event: scrollToContact },
   ];
-
+  const globalTextColor = "text-gray-900";
   return (
     <>
       <div className={`navbar ${isDark ? "bg-gray-900 text-white" : ""}`}>
@@ -76,38 +76,6 @@ function Header() {
               {text}
             </button>
           ))}
-          {/* <button
-            onClick={() => {
-              toggleMenu();
-              scrollToHome();
-            }}
-          >
-            Home
-          </button>
-          <button
-            onClick={() => {
-              toggleMenu();
-              scrollToAbout();
-            }}
-          >
-            About Me
-          </button>
-          <button
-            onClick={() => {
-              toggleMenu();
-              scrollToProject();
-            }}
-          >
-            Projects
-          </button>
-          <button
-            onClick={() => {
-              toggleMenu();
-              scrollToContact();
-            }}
-          >
-            Contact
-          </button> */}
           <a href="https://www.linkedin.com/in/uzair-ahmed-13230a250/">
             LinkedIn
           </a>
@@ -119,33 +87,33 @@ function Header() {
         <Section
           sectionClr={isDark ? "bg-gray-900 text-white" : "bg-white text-black"}
           positionClr={isDark ? "text-blue-300" : "text-gray-800"}
-          firstName={isDark ? "text-blue-300" : "text-gray-900"}
-          lastName={isDark ? "text-gray-700" : "text-gray-800"}
+          firstName={isDark ? "text-blue-300" : globalTextColor}
+          lastName={isDark ? "text-gray-500" : "text-gray-800"}
           experience={isDark ? "text-gray-500" : "text-gray-700"}
         />
       </div>
       <div ref={aboutRef}>
         <About
           aboutSection={`${
-            isDark ? "bg-gray-900 text-white" : "text-gray-900"
+            isDark ? "bg-gray-900 text-white" : globalTextColor
           }`}
         />
       </div>
       <div ref={projectRef}>
         <Projects
           projectSection={`${
-            isDark ? "bg-gray-900 text-white" : "text-gray-900"
+            isDark ? "bg-gray-900 text-white" : globalTextColor
           }`}
-          projectDiv={`${isDark ? "bg-gray-900 text-black" : "text-gray-900"}`}
+          projectDiv={`${isDark ? "bg-gray-900 text-black" : globalTextColor}`}
         />
       </div>
       <div ref={contactRef}>
         <Contact
           contactSection={`${
-            isDark ? "bg-gray-900 text-white" : "text-gray-900"
+            isDark ? "bg-gray-900 text-white" : globalTextColor
           }`}
           contactSubText={`${
-            isDark ? "bg-gray-900 text-white" : "text-gray-900"
+            isDark ? "bg-gray-900 text-white" : globalTextColor
           }`}
         />
       </div>
@@ -154,7 +122,7 @@ function Header() {
       />
       <ColorChanger
         setIsDark={setIsDark}
-        checkedColor={isDark ? "after:bg-black" : "after:bg-white"}
+        checkedColor={isDark ? "after:bg-gray-900" : "after:bg-white"}
       />
     </>
   );

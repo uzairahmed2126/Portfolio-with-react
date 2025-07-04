@@ -1,5 +1,18 @@
 import React from "react";
 import "./style.css";
+import decor from "@assets/decor.png";
+import sanitary from "@assets/sanitary.png";
+import knaider from "@assets/knaider.png";
+import survey from "@assets/survey.png";
+import recipe from "@assets/recipe.png";
+import crud from "@assets/crud.png";
+import Quiz from "@assets/Quiz.png";
+import to_do from "@assets/to-do.png";
+import joke from "@assets/joke.png";
+import bubble from "@assets/bubble.png";
+import scroll from "@assets/scroll.png";
+import calculator from "@assets/calculator.png";
+// import decor from "@assets/decor.png";
 function Projects({ projectSection, projectDiv }) {
   const projectData = [
     {
@@ -9,7 +22,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "this porject is based on FrontEnd with Animations and the art gallery!",
       link: "https://decoresystem.netlify.app/",
-      src: "@assets/decor.png",
+      src: decor,
       alt: "Decor System image",
     },
     {
@@ -19,7 +32,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "this porject is based on Fullstack Sanitary management system with Animations and the art gallery!",
       link: "https://github.com/Learners121/project--sanitary",
-      src: "./src/assets/sanitary.png",
+      src: sanitary,
       alt: "Sanitary Management System image",
     },
     {
@@ -28,7 +41,7 @@ function Projects({ projectSection, projectDiv }) {
       languages: "html,css,javascript.",
       description: "this porject is Purely based on Html css and js!",
       link: "https://github.com/uzairahmed2126/responsive-design",
-      src: "./src/assets/knaider.png",
+      src: knaider,
       alt: "Knaider image",
     },
     {
@@ -38,7 +51,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have a calculator that is calculate all the equations.",
       link: "https://github.com/uzairahmed2126/Dynamic-Survey-Builder",
-      src: "./src/assets/survey.png",
+      src: survey,
       alt: "calculator image",
     },
     {
@@ -47,7 +60,7 @@ function Projects({ projectSection, projectDiv }) {
       languages: "html,css,javascript,API.",
       description: "this porject is Purely based on Html css and js!",
       link: "https://github.com/uzairahmed2126/Project--Recipe--App",
-      src: "./src/assets/recipe.png",
+      src: recipe,
       alt: "Project-Recipe-App image",
     },
     {
@@ -57,7 +70,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "this porject is Purely based on Html css and js and operation with (DOM)!",
       link: "https://github.com/uzairahmed2126/Project--Recipe--App",
-      src: "./src/assets/crud.png",
+      src: crud,
       alt: "CRUD Project image",
     },
     {
@@ -67,7 +80,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have two buttons first one is for add question that user can easily add question with the answer and the question is comes to quiz dashboard after finishing the quiz user will get score.",
       link: "https://github.com/uzairahmed2126/react-Quiz-App",
-      src: "./src/assets/Quiz.png",
+      src: Quiz,
       alt: "Project-Quiz-App image",
     },
     {
@@ -77,7 +90,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have to enter any kind of to-do it will add them while click on add button and each to-do have complete and delete button also dropdown added for filter.",
       link: "https://github.com/uzairahmed2126/project--to-do-app",
-      src: "./src/assets/to-do.png",
+      src: to_do,
       alt: "To-Do-App image",
     },
     {
@@ -87,7 +100,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have to click on button then the random joke is generate.",
       link: "https://github.com/uzairahmed2126/project--to-do-app",
-      src: "./src/assets/joke.png",
+      src: joke,
       alt: "joke-generator image",
     },
     {
@@ -97,7 +110,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have to click on number who's showing  in Hit box,After time completion the score will show.",
       link: "https://github.com/uzairahmed2126/project--to-do-app",
-      src: "./src/assets/bubble.png",
+      src: bubble,
       alt: "bubble image",
     },
     {
@@ -107,7 +120,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have to scroll to X-axis then the image will auto generate.",
       link: "https://github.com/uzairahmed2126/project--infinite-scroll",
-      src: "./src/assets/scroll.png",
+      src: scroll,
       alt: "scroll image",
     },
     {
@@ -117,7 +130,7 @@ function Projects({ projectSection, projectDiv }) {
       description:
         "In this project, We have a calculator that is calculate all the equations.",
       link: "https://github.com/uzairahmed2126/project--calculator",
-      src: "./src/assets/calculator.png",
+      src: calculator,
       alt: "calculator image",
     },
   ];

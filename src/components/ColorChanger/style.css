@@ -1,10 +1,14 @@
 #color-changer-container {
   position: fixed;
-  top: 90%;
-  left: 90%;
+  top: auto;
+  bottom: 2rem;
+  right: 1.5rem;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform; /* Fixed typo and removed quotes */
 }
-@media screen and (max-width: 480px) {
-  #color-changer-container {
-    left: 85%;
-  }
+
+/* Optional: If you want smooth emoji transitions */
+#color-changer-container span {
+  transition: opacity 0.3s ease;
 }

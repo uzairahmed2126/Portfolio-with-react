@@ -1,8 +1,52 @@
-import React from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
 import "./about.css";
+
 function About({ aboutSection }) {
+  const aboutRef = useRef(null);
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 85%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
+      });
+
+      tl.from(aboutRef.current, {
+        y: -80,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+
+      const elements = aboutRef.current.querySelectorAll(
+        ".about-text, .about-list li"
+      );
+
+      tl.from(
+        elements,
+        {
+          x: -100,
+          opacity: 0,
+          stagger: 0.15,
+          ease: "power2.out",
+          duration: 0.8,
+        },
+        "-=0.5"
+      );
+    },
+    { scope: aboutRef }
+  );
+
   return (
-    <section className={`about-section ${aboutSection}`}>
+    <section className={`about-section ${aboutSection}`} ref={aboutRef}>
       <div className="about-container">
         <h2 className="about-heading">
           About <span>Me</span>

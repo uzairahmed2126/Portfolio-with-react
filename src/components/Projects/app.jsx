@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
 import "./style.css";
 import decor from "@assets/decor.png";
 import sanitary from "@assets/sanitary.png";
@@ -134,10 +138,32 @@ function Projects({ projectSection, projectDiv }) {
       alt: "calculator image",
     },
   ];
+  const galleryRef = useRef(null);
+  useGSAP(
+    () => {
+      const cards = galleryRef.current.querySelectorAll(".project");
+      gsap.from(
+        cards,
+        {
+          y: -50,
+          opacity: 0,
+          duration: 2,
+          stagger: 0.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: galleryRef.current,
+            start: "top 80%",
+          },
+        },
+        { cards, y: 0 }
+      );
+    },
+    { scope: galleryRef }
+  );
   return (
     <section className={`project-gallery ${projectSection}`}>
       <h2 className="gallery-heading">Projects Gallery</h2>
-      <div className="gallery-grid">
+      <div className="gallery-grid" ref={galleryRef}>
         {projectData.map(
           ({ id, workType, languages, description, link, src, alt }) => (
             <div className={`project ${projectDiv}`} key={id}>

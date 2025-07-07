@@ -32,6 +32,8 @@ body {
 
 .desktop-links button,
 .desktop-links a {
+  align-items: center;
+  text-align: center;
   padding: 8px 12px;
   box-shadow: 1px 2px 2px;
   border-radius: 8px;
@@ -63,7 +65,15 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.4),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(14px);
+  /* background: linear-gradient(rgba);
+  */
   height: 100vh;
   z-index: 999;
   display: flex;

@@ -16,7 +16,6 @@ import joke from "@assets/joke.png";
 import bubble from "@assets/bubble.png";
 import scroll from "@assets/scroll.png";
 import calculator from "@assets/calculator.png";
-// import decor from "@assets/decor.png";
 function Projects({ projectSection, projectDiv }) {
   const projectData = [
     {
@@ -142,22 +141,31 @@ function Projects({ projectSection, projectDiv }) {
   useGSAP(
     () => {
       const cards = galleryRef.current.querySelectorAll(".project");
-      gsap.from(
-        cards,
-        {
-          y: -50,
-          opacity: 0,
-          duration: 2,
-          stagger: 0.5,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: galleryRef.current,
-            start: "top 80%",
-          },
+      const cardsContainer =
+        galleryRef.current.querySelector(".project-gallery");
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: galleryRef.current,
+          start: "top 85%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          markers: false,
         },
-        { cards, y: 0 }
-      );
+      });
+      tl.from(cards, {
+        x: -40,
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: cardsContainer,
+          start: "top 80%",
+        },
+      });
     },
+
     { scope: galleryRef }
   );
   return (

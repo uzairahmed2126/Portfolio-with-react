@@ -1,28 +1,45 @@
-import React, { useEffect, useRef } from "react";
-import "./style.css";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import "./style.css";
 function Section({ sectionClr, positionClr, firstName, lastName, experience }) {
   const sectionRef = useRef(null);
-  gsap.registerPlugin(useGSAP);
   useGSAP(() => {
     const fullName = sectionRef.current.querySelector(".full-name");
     const experience = sectionRef.current.querySelector(".experience");
-    gsap.fromTo(
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 85%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        markers: false,
+        x: -40,
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power3.out",
+      },
+    });
+
+    tl.fromTo(
       sectionRef.current,
       { y: -100, opacity: 0.4 },
-      { y: 0, opacity: 1, duration: 2, ease: "power3.out" }
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+      }
     );
-    gsap.fromTo(
+    tl.fromTo(
       [fullName, experience],
       { x: -1500, opacity: 0.4 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 2,
-        ease: "power3.out",
-        // scrollTrigger: fullName,
-      }
+      { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
     );
   });
 

@@ -37,6 +37,10 @@
   font-family: inherit;
   resize: none;
 }
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: gray;
+}
 
 .contact-form input:focus,
 .contact-form textarea:focus {

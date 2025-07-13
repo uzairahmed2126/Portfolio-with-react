@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 import { FaAlignJustify } from "react-icons/fa";
+import platForm from "platform";
 import {
   About,
   Section,
@@ -25,6 +26,8 @@ function Header() {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
+
+    localStorage.setItem("userDetails", JSON.stringify(platForm.os));
   }, [isOpen]);
 
   const scrollToHome = () => {
@@ -47,7 +50,6 @@ function Header() {
     { text: "Contact", event: scrollToContact },
   ];
   const globalTextColor = "text-gray-900";
-
   useGSAP(
     () => {
       const tl = gsap.timeline({

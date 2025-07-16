@@ -14,7 +14,7 @@ import {
   ColorChanger,
 } from "../index.js";
 import "./style.css";
-
+import useLogActivity from "@hooks/useLogActivity/app.js";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -23,12 +23,13 @@ function Header() {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
   const navRef = useRef(null);
+  const logActivity = useLogActivity();
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
-
     localStorage.setItem("userDetails", JSON.stringify(platForm.os));
-  }, [isOpen]);
+    logActivity("User Enter");
+  }, [isOpen, logActivity]);
 
   const scrollToHome = () => {
     homeRef.current?.scrollIntoView({ behavior: "smooth" });

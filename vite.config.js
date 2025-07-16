@@ -9,7 +9,8 @@ export default defineConfig({
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   resolve : {
     alias: {
-    "@assets" : path.resolve(__dirname,"src/assets")
+    "@assets" : path.resolve(__dirname,"src/assets"),
+    "@hooks" : path.resolve(__dirname,"src/hooks")
     }
   }
 
